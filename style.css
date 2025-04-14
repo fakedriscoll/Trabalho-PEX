@@ -1,0 +1,189 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #76d5f1;
+  text-align: center;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+#quiz, #score-container, #admin-panel, #login-screen {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(92, 175, 243);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.answer-button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.answer-button:hover {
+  background-color: #d0d0d0;
+}
+
+#next-button {
+  padding: 12px 24px;
+  background-color: #673ab7;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+#next-button:hover {
+  background-color: #5e35b1;
+}
+
+#admin-mode-button {
+  display: block;
+  margin: 20px auto;
+  padding: 14px 28px;
+  background-color: #ff0707;
+  color: white; 
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#admin-mode-button:hover {
+  background-color: #1976D2;
+  transform: translateY(-2px);
+}
+
+#admin-panel input, #admin-panel select {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 90%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#admin-panel button {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#save-question {
+  background-color: #4caf50;
+  color: white;
+}
+
+#exit-admin {
+  background-color: #f44336;
+  color: white;
+}
+
+#login-screen input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 250px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#login-button {
+  padding: 12px 24px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#login-button:hover {
+  background-color: #388E3C;
+  transform: translateY(-2px);
+}
+
+#restart-button {
+  padding: 12px 24px;
+  background-color: #ff9800;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#restart-button:hover {
+  background-color: #f57c00;
+  transform: translateY(-2px);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Estilizando o seletor de dificuldades */
+#difficulty-select {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #4caf50; /* Cor verde */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#difficulty-select:hover {
+  background-color: #388E3C; /* Cor verde escuro para hover */
+  transform: translateY(-2px);
+}
+
+#difficulty-select:active {
+  transform: translateY(2px); /* Efeito de pressão */
+}
+
+/* Estilo para o rótulo do seletor de dificuldades */
+label[for="difficulty-select"] {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  display: block;
+  color: #333;
+}
+
+/* Estilo para o seletor de dificuldade desativado */
+#difficulty-select:disabled {
+  background-color: #e0e0e0;  /* Cor de fundo mais clara */
+  cursor: not-allowed;        /* Muda o cursor para indicar que está desabilitado */
+}
