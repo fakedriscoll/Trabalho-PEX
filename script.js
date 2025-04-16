@@ -483,3 +483,36 @@
     feedbackElement.classList.add("feedback");  // Adicione uma classe para estilizar
     scoreContainer.appendChild(feedbackElement);
   }
+
+  function getQuestionsBySelectedDifficulty(difficulty) {
+    let filteredQuestions;
+  
+    if (difficulty === "todas") {
+      filteredQuestions = [...allQuestions]; // copia todas
+    } else {
+      filteredQuestions = allQuestions.filter(q => q.difficulty === difficulty);
+    }
+  
+    // Embaralha e pega até 50 questões (ou menos, se não houver tantas)
+    return shuffle(filteredQuestions).slice(0, 50);
+  }
+
+  // Seleciona o botão de alternância de tema
+const themeToggleButton = document.getElementById('theme-toggle');
+
+// Verifica se o tema escuro está ativado, se sim, aplica o tema escuro ao carregar a página
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark-mode');
+}
+
+// Alterna entre o tema escuro e o tema claro quando o botão é clicado
+themeToggleButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  
+  // Salva a preferência do usuário no localStorage
+  if (document.body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.removeItem('theme');
+  }
+});
