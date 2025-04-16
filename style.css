@@ -3,6 +3,7 @@ body {
   background-color: #76d5f1;
   text-align: center;
   padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h2 {
@@ -16,6 +17,7 @@ h2 {
   background-color: rgb(92, 175, 243);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .answer-button {
@@ -186,4 +188,82 @@ label[for="difficulty-select"] {
 #difficulty-select:disabled {
   background-color: #e0e0e0;  /* Cor de fundo mais clara */
   cursor: not-allowed;        /* Muda o cursor para indicar que está desabilitado */
+}
+
+/* Tema claro (padrão) */
+body {
+  background-color: #76d5f1;
+  color: #333;
+}
+
+#quiz, #score-container, #admin-panel, #login-screen {
+  background-color: rgb(92, 175, 243);
+  color: #333;
+}
+
+/* Tema escuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+body.dark-mode #quiz, 
+body.dark-mode #score-container, 
+body.dark-mode #admin-panel, 
+body.dark-mode #login-screen {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode #next-button,
+body.dark-mode #login-button,
+body.dark-mode #restart-button,
+body.dark-mode #admin-mode-button,
+body.dark-mode #difficulty-select {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark-mode .answer-button {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark-mode #next-button:hover,
+body.dark-mode #login-button:hover,
+body.dark-mode #restart-button:hover,
+body.dark-mode #admin-mode-button:hover,
+body.dark-mode #difficulty-select:hover {
+  background-color: #555;
+}
+
+/* Estilizando o botão de alternância de tema */
+#theme-toggle {
+  padding: 10px 20px;
+  background-color: #4caf50;  /* Cor verde para o tema claro */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 20px;
+}
+
+#theme-toggle:hover {
+  background-color: #388E3C;  /* Cor verde escuro para hover */
+  transform: translateY(-2px); /* Levanta o botão ao passar o mouse */
+}
+
+#theme-toggle:active {
+  transform: translateY(2px); /* Efeito de pressão no clique */
+}
+
+body.dark-mode #theme-toggle {
+  background-color: #333;  /* Cor escura para o tema escuro */
+}
+
+body.dark-mode #theme-toggle:hover {
+  background-color: #555;  /* Cor de hover mais escura no tema escuro */
 }
